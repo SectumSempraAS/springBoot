@@ -1,4 +1,4 @@
-package com.anshuman.sprinboot;
+package com.anshuman.springboot;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
