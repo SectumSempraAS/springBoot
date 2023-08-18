@@ -1,7 +1,11 @@
 package com.anshuman.sprinboot;
 
-public class Main {
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CourseApiApp {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        SpringApplication.run(CourseApiApp.class, args);
     }
 }
