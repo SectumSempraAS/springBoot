@@ -16,6 +16,10 @@ public class TopicService {
     public List<Topic> getAllTopics() {
         return topicLists;
     }
+
+    public Topic getTopic(String id) {
+        return topicLists.stream().filter(t -> t.getId().equals(id)).findFirst().get();
+    }
 }
 
 // a business service (singleton) created which will help spring register a instance 
