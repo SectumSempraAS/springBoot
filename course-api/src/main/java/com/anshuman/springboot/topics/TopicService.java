@@ -26,6 +26,20 @@ public class TopicService {
         int currentLength = topicLists.size();
         topicLists.add(currentLength, topic);
     }
+
+    public void updateTopic(Topic newTopic, String id) {
+        for (int i = 0 ; i < topicLists.size() ; i++) {
+            Topic t = topicLists.get(i);
+            if (t.getId().equals(id)) {
+                topicLists.set(i, newTopic);
+                return;
+            }
+        }
+    }
+
+    public void deleteTopic(String id) {
+        topicLists.removeIf(t -> t.getId().equals(id));
+    }
 }
 
 // a business service (singleton) created which will help spring register a instance 
